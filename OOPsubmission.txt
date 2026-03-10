@@ -1,0 +1,71 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Dog {
+public:
+    // Properties (State/Structure)
+    string breed;
+    string color;
+    float height;
+    float weight;
+
+    // Constructor
+    Dog(string breed, string color, float height, float weight) {
+        this->breed = breed;
+        this->color = color;
+        this->height = height;
+        this->weight = weight;
+    }
+
+    // Methods (Behavior)
+    void shake() {
+        cout << breed << " is shaking!" << endl;
+    }
+
+    void sit() {
+        cout << breed << " is sitting!" << endl;
+    }
+
+    void layDown() {
+        cout << breed << " is laying down!" << endl;
+    }
+
+    void displayInfo() {
+        cout << "=== Dog Info ===" << endl;
+        cout << "Breed:  " << breed << endl;
+        cout << "Color:  " << color << endl;
+        cout << "Height: " << height << " feet" << endl;
+        cout << "Weight: " << weight << " pounds" << endl;
+    }
+};
+
+int main() {
+    // Create the object (instance) with the exact values from the image
+    Dog myDog("Hound", "Brown", 2.0, 60.0);
+
+    // Display inherited properties
+    myDog.displayInfo();
+
+    cout << endl;
+
+    // Call inherited methods
+    myDog.shake();
+    myDog.sit();
+    myDog.layDown();
+
+    return 0;
+}
+```
+
+**Output:**
+```
+=== Dog Info ===
+Breed:  Hound
+Color:  Brown
+Height: 2 feet
+Weight: 60 pounds
+
+Hound is shaking!
+Hound is sitting!
+Hound is laying down!
